@@ -14,7 +14,76 @@ let friendsArray = [
       4,
       1
     ]
+  },
+
+  {
+    "name":"Bobby",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+      3,
+      2,
+      4,
+      1,
+      5,
+      2,
+      5,
+      5,
+      3,
+      1
+    ]
+  },
+
+  {
+    "name":"Tom",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+
+  {
+    "name":"Ryan",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+      1,
+      1,
+      4,
+      1,
+      1,
+      2,
+      1,
+      5,
+      3,
+      1
+    ]
+  },
+
+  {
+    "name":"Mike",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+      3,
+      2,
+      4,
+      3,
+      2,
+      2,
+      2,
+      3,
+      3,
+      1
+    ]
   }
+  
 ];
 
 module.exports = friendsArray;
