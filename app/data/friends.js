@@ -38,15 +38,15 @@ let friendsArray = [
     "photo":"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12193133/German-Shepherd-Puppy-Fetch.jpg",
     "scores":[
       5,
+      2,
+      3,
       5,
       5,
+      4,
+      1,
       5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
+      3,
+      4
     ]
   }
   

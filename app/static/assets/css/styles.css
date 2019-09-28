@@ -1,5 +1,26 @@
+body#homePage {
+  background: url('/assets/images/javier-allegue-barros-Kr3Ls8Tw8h4-unsplash.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+/* i#imgIcon {
+  color: blue;
+} */
+
+img {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+button.customBtn, button.customBtn:hover {
+  background-color: #1a1818;
+  color: white;
+  opacity: .8;
+}
+
 h1#homePageHeader {
   font-family: 'Frank Ruhl Libre', serif;
+  margin-top: 200px;
 }
 
 p#homePageP {
@@ -7,23 +28,11 @@ p#homePageP {
   margin-bottom: 40px;
 }
 
-h5, h3 {
+h2, h5, button, label.inputLabel, .modal {
   font-family: 'Frank Ruhl Libre', serif;
 }
 
 span {
   font-family: 'Nanum Myeongjo', serif;
   margin: 20px;
-}
-
-button {
-  font-family: 'Frank Ruhl Libre', serif;
-}
-
-label.inputLabel {
-  font-family: 'Frank Ruhl Libre', serif;
-}
-
-.modal {
-  font-family: 'Frank Ruhl Libre', serif;
 }
