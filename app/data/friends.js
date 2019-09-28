@@ -1,7 +1,7 @@
 let friendsArray = [
   {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Mike",
+    "photo":"https://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg",
     "scores":[
       5,
       1,
@@ -18,7 +18,7 @@ let friendsArray = [
 
   {
     "name":"Bobby",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://cdn.royalcanin-weshare-online.io/pCJJPmYBaxEApS7LeAbn/v1/ed7h-how-to-buy-a-puppy-hero-dog",
     "scores":[
       3,
       2,
@@ -34,8 +34,8 @@ let friendsArray = [
   },
 
   {
-    "name":"Tom",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Scott",
+    "photo":"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12193133/German-Shepherd-Puppy-Fetch.jpg",
     "scores":[
       5,
       5,
@@ -47,40 +47,6 @@ let friendsArray = [
       5,
       5,
       5
-    ]
-  },
-
-  {
-    "name":"Ryan",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-      1,
-      1,
-      4,
-      1,
-      1,
-      2,
-      1,
-      5,
-      3,
-      1
-    ]
-  },
-
-  {
-    "name":"Mike",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-      3,
-      2,
-      4,
-      3,
-      2,
-      2,
-      2,
-      3,
-      3,
-      1
     ]
   }
   

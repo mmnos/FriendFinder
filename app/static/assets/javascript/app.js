@@ -59,7 +59,7 @@ $("#submit").on("click", () => {
 
   // };
 
-  $.get("/api/survey", function(data) {
+  // $.get("/api/survey", function(data) {
 
   // let closestMatch = "charles";
   // let closestMatchDiff = 41;
@@ -99,7 +99,7 @@ $("#submit").on("click", () => {
   // return closestMatch;
 
   
-});
+// });
 
 
   $.post("/api/survey", currentUser, function(data) {
@@ -110,7 +110,7 @@ $("#submit").on("click", () => {
 
     $("#matchModal").text(`WOW ${data.matchPercent}%! You and ${data.name} are a great match!`);
     // $("#matchPercModal").text(`You're a ${data.matchPercent}% match!`);
-    $(".modal-content").append(`<img src="${data.profilePic}" width="200" height="200"/>`);
+    $(".modalImg").attr("src", data.photo);
 
   });
 
