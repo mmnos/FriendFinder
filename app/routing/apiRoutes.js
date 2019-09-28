@@ -2,19 +2,50 @@ let friends = require("../data/friends");
 let getMatch = require("../../logic");
 
 module.exports = function(app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
 
   app.get("/api/survey", function(req, res) {
+
     res.json(friends);
+
   });
 
   app.post("/api/survey", (req, res) => {
 
-    let match = getMatch(friends, req.body);
+    let currentUser = req.body;
+
+    let closestMatch = "charles";
+    let closestMatchDiff = 41;
+  
+    friends.forEach(friend => {
+      
+      let totalDiff = 0;
+  
+      currentUser.scores.forEach((userScore, index) => {
+  
+        totalDiff += Math.abs(userScore - friend.scores[index]);
+  
+      });
+      
+      if (closestMatchDiff > totalDiff) {
+        closestMatchDiff = totalDiff;
+        closestMatch = friend;
+      }
+  
+    });
+  
+    let matchDiff = closestMatchDiff / 40 * 100;
+    let matchPercent = 100 - matchDiff;
+  
+    console.log(closestMatch);
+    console.log(matchPercent);
+  
+    let profilePic = closestMatch.photo;
+    console.log(profilePic); 
+
+    friends.push(req.body);
+    res.json({
+      ...closestMatch, matchPercent : matchPercent
+    });
 
   });
 

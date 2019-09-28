@@ -1,0 +1,29 @@
+h1#homePageHeader {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+p#homePageP {
+  font-family: 'Nanum Myeongjo', serif;
+  margin-bottom: 40px;
+}
+
+h5, h3 {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+span {
+  font-family: 'Nanum Myeongjo', serif;
+  margin: 20px;
+}
+
+button {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+label.inputLabel {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+.modal {
+  font-family: 'Frank Ruhl Libre', serif;
+}

@@ -10,6 +10,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -21,17 +24,27 @@
 
   <div class="container">
 
-    <div class="row center">
-      <div class="col s12">
-        <h1>Friend Finder</h1>
+    <div id="modal1" class="modal">
+      <div id="modalImg" class="modal-content">
+        <h4 id="matchModal"></h4>
+        <p id="matchPercModal"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
       </div>
     </div>
 
     <div class="row center">
       <div class="col s12">
-        <h2>Tell me about yourself</h2>
+        <h3>tell us a little about you</h3>
       </div>
     </div>
+
+    <!-- <div class="row center">
+      <div class="col s12">
+        <h2>Tell me about yourself</h2>
+      </div>
+    </div> -->
 
     <div class="row">
       <form class="col s12">
@@ -43,7 +56,7 @@
           <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input id="userName" type="text" class="validate">
-            <label for="userName">Name</label>
+            <label class="inputLabel" for="userName">Name</label>
           </div>
           <!-- <div class="input-field col s6">
             <input placeholder="Lets see your beautiful face.." id="userImg" type="text" class="validate">
@@ -52,7 +65,7 @@
           <div class="input-field col s6">
             <i class="material-icons prefix">image</i>
             <input id="userImg" type="text" class="validate">
-            <label for="userImg">Profile Pic</label>
+            <label class="inputLabel" for="userImg">Profile Pic</label>
           </div>
         </div>
       </form>
@@ -334,23 +347,23 @@
           <form action="#">
 
               <label>
-                <input name="question10" type="radio" value="1" unchecked />
+                <input class="clearBtn" name="question10" type="radio" value="1" unchecked />
                 <span>Strongly Disagree</span>
               </label>
               <label>
-                <input name="question10" type="radio" value="2" unchecked />
+                <input class="clearBtn" name="question10" type="radio" value="2" unchecked />
                 <span>Disagree</span>
               </label>
               <label>
-                <input name="question10" type="radio" value="3" unchecked />
+                <input class="clearBtn" name="question10" type="radio" value="3" unchecked />
                 <span>Neutral</span>
               </label>
               <label>
-                <input name="question10" type="radio" value="4" unchecked />
+                <input class="clearBtn" name="question10" type="radio" value="4" unchecked />
                 <span>Agree</span>
               </label>
               <label>
-                <input name="question10" type="radio" value="5" unchecked />
+                <input class="clearBtn" name="question10" type="radio" value="5" unchecked />
                 <span>Strongly Agree</span>
               </label>
     
@@ -360,7 +373,7 @@
 
     <div class="row center">
 
-      <a class="waves-effect waves-light btn" id="submit">Submit</a>
+      <button class="waves-effect waves-light btn modal-trigger" id="submit" data-target="modal1">Submit</button>
       
     </div>
 
@@ -374,15 +387,13 @@
     crossorigin="anonymous">
   </script>
 
-  <script>
+  <!-- <script>
 
-    
     document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('select');
-      var instances = M.FormSelect.init(elems);
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
     });
 
-    
     $("#submit").on("click", () => {
       
       event.preventDefault();
@@ -406,24 +417,20 @@
         name : $("#userName").val().trim(),
         photo : $("#userImg").val().trim(),
         scores : scoreArr
-      }
+      };
 
       console.log(currentUser);
 
       $.get("/api/survey", function(data) {
-        
-      })
-
-      let getMatch = (friends, scoreArr) => {
 
       let closestMatch = "charles";
       let closestMatchDiff = 41;
 
-      friends.forEach(friend => {
+      data.forEach(friend => {
         
         let totalDiff = 0;
 
-        user.scores.forEach((userScore, index) => {
+        currentUser.scores.forEach((userScore, index) => {
 
           totalDiff += Math.abs(userScore - friend.scores[index]);
 
@@ -439,17 +446,34 @@
       let matchDiff = closestMatchDiff / 40 * 100;
       let matchPercent = 100 - matchDiff;
 
+      console.log(closestMatch);
       console.log(matchPercent);
 
-      console.log(closestMatch);
+      let profilePic = closestMatch.photo;
+      console.log(profilePic); 
 
       return closestMatch;
 
-      };
+      $("#matchModal").text(`WOW! You've matched with ${closestMatch}!`);
+      $("#matchPercModal").text(`You're a ${matchPercent}% match!`);
+      $(".modal-content").append(`<img src=${profilePic}/>`);
+      
+    });
+
+
+      $.post("/api/survey", currentUser, function(data) {
+
+        if (data) {
+          console.log("added user to friends array");
+        }
+
+      });
 
     });
 
-  </script>
+  </script> -->
+
+  <script src="./assets/javascript/app.js" type="text/javascript"></script>
 
   <!-- <style>
   input[type='radio'] { transform: scale(2); }
