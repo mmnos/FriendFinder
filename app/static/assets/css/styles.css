@@ -3,10 +3,6 @@ body#homePage {
   background-size: cover;
 }
 
-/* i#imgIcon {
-  color: blue;
-} */
-
 img {
   max-height: 400px;
   max-width: 400px;

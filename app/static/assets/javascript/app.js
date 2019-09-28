@@ -7,8 +7,6 @@ $("#submit").on("click", () => {
   
   event.preventDefault();
 
-
-
   let scoreArr = [];
 
   scoreArr.push(
@@ -35,7 +33,6 @@ $("#submit").on("click", () => {
     photo : $("#userImg").val().trim(),
     scores : scoreArr
   };
-
 
   console.log(currentUser);
 
