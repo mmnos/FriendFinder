@@ -1,5 +1,4 @@
 let friends = require("../data/friends");
-let getMatch = require("../../logic");
 
 module.exports = function(app) {
 
